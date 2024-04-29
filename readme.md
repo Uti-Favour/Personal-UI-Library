@@ -1,4 +1,4 @@
-# Tailwind Vanilla UI Library
+# Personal UI Library
 
 This is a Tailwind UI Library built exclusively with Tailwind CSS and Vanilla JavaScript. It offers a comprehensive collection of templates necessary for constructing a complete website from scratch. Unlike many libraries available today, which are predominantly designed for frameworks like `React` and `Next.js`, this library focuses on simplicity and accessibility.
 
@@ -14,10 +14,12 @@ The files are meticulously organized into HTML and JavaScript components for eff
 ```cd tailwind-vanilla-ui-library```
 
 3. Initialize Tailwind:
-```npm init -y```
+```bash
+npm init -y
 
 4. Install Tailwind CSS:
-```npm install tailwindcss```
+```bash
+npm install tailwindcss
 
 With these steps completed, you're ready to dive in. The library is fully customizable, allowing you to tailor it to your specific design preferences.
 
