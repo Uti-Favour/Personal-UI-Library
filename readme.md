@@ -14,12 +14,10 @@ The files are meticulously organized into HTML and JavaScript components for eff
 ```cd tailwind-vanilla-ui-library```
 
 3. Initialize Tailwind:
-```bash
-npm init -y
+```npm init -y```
 
 4. Install Tailwind CSS:
-```bash
-npm install tailwindcss
+```npm install tailwindcss```
 
 With these steps completed, you're ready to dive in. The library is fully customizable, allowing you to tailor it to your specific design preferences.
 
