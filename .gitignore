@@ -1,0 +1,14 @@
+# Ignore Node.js generated files
+node_modules/
+
+# Ignore compiled binary files
+*.o
+*.out
+*.exe
+
+# Ignore log and temp files
+*.log
+*.tmp
+
+# Ignore yarn integrity file
+.yarn-integrity

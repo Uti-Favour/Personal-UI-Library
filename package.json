@@ -1,0 +1,15 @@
+{
+  "name": "personal-ui-library",
+  "version": "1.0.0",
+  "description": "This is a Tailwind UI Library built with Tailwind CSS and Vanilla JavaScript. It has all the Template you'll need to build a complete website from scratch. Most Library out there are built with framworks like ```JavaScript``` and ```Next.js``` , not this one !!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
