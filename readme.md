@@ -13,7 +13,7 @@ The files are meticulously organized into HTML and JavaScript components for eff
 2. Navigate into the project directory:
 ```cd tailwind-vanilla-ui-library```
 
-3. Initialize Tailwind:
+3. **Initialize Tailwind:**
 ```npm init -y```
 
 4. Install Tailwind CSS:
