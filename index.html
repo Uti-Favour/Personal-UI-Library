@@ -2,20 +2,698 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind UI Library</title>
-  <link rel="stylesheet" href="./src/css/styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero UI Template</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./src/components/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
 
 <body>
+    <!-- Background -->
+    <div
+        class="absolute inset-0 -z-10 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+    </div>
+
+    <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-8 w-auto" src="./src/assets/images/metazak_logo_asset.png" alt="" />
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <div class="relative">
+                    <button type="button"
+                        class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+                        aria-expanded="false">
+                        Product
+                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+                    <div
+                        class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 hidden">
+                        <div class="p-4">
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div
+                                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-gray-900">
+                                        Analytics
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">
+                                        Get a better understanding of your traffic
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div
+                                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-gray-900">
+                                        Engagement
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">
+                                        Speak directly to your customers
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div
+                                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-gray-900">
+                                        Security
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">
+                                        Your customers’ data will be safe and secure
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div
+                                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-gray-900">
+                                        Integrations
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">
+                                        Connect with third-party tools
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div
+                                    class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-gray-900">
+                                        Automations
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">
+                                        Build strategic funnels that will convert
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                            <a href="#"
+                                class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                                <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Watch demo
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                                <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Contact sales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="./src/assets/images/metazak_logo_asset.png" alt="" />
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <div class="-mx-3">
+                                <button type="button"
+                                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    aria-controls="disclosure-1" aria-expanded="false">
+                                    Product
+                                    <!--
+                  Expand/collapse icon, toggle classes based on menu open state.
+
+                  Open: "rotate-180", Closed: ""
+                -->
+                                    <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                                <div class="mt-2 space-y-2" id="disclosure-1">
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Analytics</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Engagement</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Security</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Integrations</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Automations</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Watch
+                                        demo</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact
+                                        sales</a>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="lg:mt-16 lg:flex lg:space-x-20 lg:mx-16 mx-5 relative">
+        <!-- Content goes here -->
+        <div class="mt-2">
+            <div class="sm:mb-5 sm:flex">
+                <div
+                    class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    Building the future of Crypto now.
+                    <a href="#"
+                        class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-700"><span
+                            class="absolute inset-0" aria-hidden="true"></span>Read
+                        more <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+            <!-- --------- text area ---------- -->
+            <div class="mt-5 lg:mt-0">
+                <h1 class="text-4xl lg:text-5xl font-semibold max-w-lg leading-10 text-gray-900">
+                    GateWay to Intelligent Crypto <br class="lg:hidden" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-700 auto-type"></span>
+                </h1>
+                <p class="max-w-lg mt-5 text-gray-800 leading-loose">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                    cupiditate modi ad aspernatur labore dignissimos aut eius suscipit
+                    rem facilis?
+                </p>
+            </div>
+
+            <!-- ------------ button ------------- -->
+            <div class="mt-6 flex gap-5">
+                <div class="px-8 py-3 bg-gray-900 rounded-xl text-white flex items-center gap-2">
+                    <a href="#">Learn More</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </div>
+
+                <div class="lg:px-8 py-3 flex lg:gap-3 gap-4 items-center lg:border rounded-xl">
+                    <a href="#">Explore</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------- image --------- -->
+
+        <div class="lg:w-1/2 lg:mt-0 mt-10">
+            <img src="./src/assets/images/Dashboard assets.png" alt="..." class="rounded-lg lg:rounded-3xl" />
+        </div>
+
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: [
+                    "Investment.",
+                    "Securities.",
+                    "Holdings.",
+                    "Assets.",
+                    "Potfolios.",
+                ],
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true,
+            });
+        </script>
+    </section>
+
+    <div class="bg-white">
+        <div class="mx-auto lg:mx-5 px-6 lg:px-8">
+            <div class="mx-auto mt-16 lg:mt-24">
+                <dl class="grid grid-cols-1 lg:grid-cols-3 lg:space-x-10">
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div
+                                class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-700">
+                                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                                </svg>
+                            </div>
+                            Push to deploy
+                        </dt>
+                        <dd class="mt-2 text-sm text-gray-600 leading-6 mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                            culpa beatae atque sunt sit aspernatur cupiditate odio iure
+                            minus suscipit.
+                        </dd>
+                    </div>
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div
+                                class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-700">
+                                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                </svg>
+                            </div>
+                            SSL certificates
+                        </dt>
+                        <dd class="mt-2 text-sm text-gray-600 leading-6 mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                            culpa beatae atque sunt sit aspernatur cupiditate odio iure
+                            minus suscipit.
+                        </dd>
+                    </div>
+
+                    <div class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div
+                                class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-700">
+                                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                </svg>
+                            </div>
+                            Simple queues
+                        </dt>
+                        <dd class="mt-2 text-sm text-gray-600 leading-6 mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                            culpa beatae atque sunt sit aspernatur cupiditate odio iure
+                            minus suscipit.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Features =========== -->
+    <div class="bg-gray-900 py-24 sm:py-32 rounded-tl-3xl rounded-tr-3xl mt-10">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h2 class="text-base font-semibold leading-7 text-indigo-600">
+                    Deploy faster
+                </h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Everything you need to deploy your app
+                </p>
+                <p class="mt-6 text-base lg:text-lg leading-8 text-gray-400">
+                    Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+                    Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
+                    In mi viverra elit nunc.
+                </p>
+            </div>
+
+            <!-- ========== Frame 4 ========== -->
+            <div class="mt-20">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
+                    <div>
+                        <dt class="text-base text-white flex">
+                            <div class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-purple-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                                </svg>
+                            </div>
+                            <strong>Desktop Compatible</strong>
+                        </dt>
+                        <dl class="mt-2 text-base text-gray-400 leading-6  mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde culpa
+                            beatae atque sunt sit aspernatur cupiditate odio iure minus
+                            suscipit.
+                        </dl>
+                        <div class="flex items-center mb-14">
+                            <a href="#" class="text-base text-purple-600">Learn more </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ml-1 text-purple-600">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div>
+                        <dt class="text-base text-white flex">
+                            <div class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-purple-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                                </svg>
+                            </div>
+                            <strong>Quick error response</strong>
+                        </dt>
+                        <dl class="mt-2 text-base text-gray-400 leading-6  mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde culpa
+                            beatae atque sunt sit aspernatur cupiditate odio iure minus
+                            suscipit.
+                        </dl>
+                        <div class="flex items-center mb-14">
+                            <a href="#" class="text-base text-purple-600">Learn more </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ml-1 text-purple-600">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div>
+                        <dt class="text-base text-white flex">
+                            <div class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-purple-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                </svg>
+                            </div>
+                            <strong>Reusable components</strong>
+                        </dt>
+                        <dl class="mt-2 text-base text-gray-400 leading-6  mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde culpa
+                            beatae atque sunt sit aspernatur cupiditate odio iure minus
+                            suscipit.
+                        </dl>
+                        <div class="flex items-center">
+                            <a href="#" class="text-base text-purple-600">Learn more </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ml-1 text-purple-600">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <dt class="text-base text-white flex">
+                            <div class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-purple-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                </svg>
+                            </div>
+                            <strong>Reusable components</strong>
+                        </dt>
+                        <dl class="mt-2 text-base text-gray-400 leading-6  mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde culpa
+                            beatae atque sunt sit aspernatur cupiditate odio iure minus
+                            suscipit.
+                        </dl>
+                        <div class="flex items-center">
+                            <a href="#" class="text-base text-purple-600">Learn more </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ml-1 text-purple-600">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <dt class="text-base text-white flex">
+                            <div class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-purple-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                </svg>
+                            </div>
+                            <strong>Reusable components</strong>
+                        </dt>
+                        <dl class="mt-2 text-base text-gray-400 leading-6  mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde culpa
+                            beatae atque sunt sit aspernatur cupiditate odio iure minus
+                            suscipit.
+                        </dl>
+                        <div class="flex items-center">
+                            <a href="#" class="text-base text-purple-600">Learn more </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ml-1 text-purple-600">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <dt class="text-base text-white flex">
+                            <div class="mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-purple-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                </svg>
+                            </div>
+                            <strong>Reusable components</strong>
+                        </dt>
+                        <dl class="mt-2 text-base text-gray-400 leading-6  mb-10 max-w-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde culpa
+                            beatae atque sunt sit aspernatur cupiditate odio iure minus
+                            suscipit.
+                        </dl>
+                        <div class="flex items-center">
+                            <a href="#" class="text-base text-purple-600">Learn more </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ml-1 text-purple-600">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 mx-5 lg:mx-20 border py-16 px-10 mt-20 rounded-3xl">
+
+        <div>
+            <div class="mb-10">
+                <img src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="" />
+            </div>
+
+            <p class="max-w-md text-base lg:text-lg leading-7 text-gray-800">
+                “Amet amet eget scelerisque tellus sit neque faucibus non eleifend.
+                Integer eu praesent at a. Ornare arcu gravida natoque erat et cursus
+                tortor consequat at. Vulputate gravida sociis enim nullam ultricies
+                habitant malesuada lorem ac. Tincidunt urna dui pellentesque
+                sagittis.”
+            </p>
+
+            <!-- ---- user ---- -->
+            <div class="flex mt-10">
+                <img src="./src/assets/images/profile image.avif" class="w-14 h-14 rounded-full">
+
+                <div class="ml-5">
+                    <h2 class="text-gray-900"><strong>Uti Favour</strong></h2>
+                    <span class="text-gray-700">CEO of Unstutter</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="h-px flex-auto bg-gray-100 mt-20 lg:hidden"></div>
+
+        <!-- -------- Second Section ------- -->
+
+        <div class="mt-20 lg:mt-0">
+            <div class="mb-10">
+                <img src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="" />
+            </div>
+
+            <p class="max-w-md text-base lg:text-lg leading-7 text-gray-800">
+                “Excepteur veniam labore ullamco eiusmod. Pariatur consequat proident
+                duis dolore nulla veniam reprehenderit nisi officia voluptate
+                incididunt exercitation exercitation elit. Nostrud veniam sint dolor
+                nisi ullamco. incidunt urna dui pellentesque
+                sagittis reprehenderit.”
+            </p>
+
+            <!-- ---- user ---- -->
+            <div class="flex mt-10">
+                <img src="./src/assets/images/profile-img-2.avif" class="w-14 h-14 rounded-full">
+
+                <div class="ml-5">
+                    <h2 class="text-gray-900"><strong>Onwumi Precious</strong></h2>
+                    <span class="text-gray-700">CEO of Transition</span>        
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
+    <!-- ======== CTA SECTION ========= -->
+
+    <div class="bg-white">
+        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div
+                class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                <svg viewBox="0 0 1024 1024"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                    aria-hidden="true">
+                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                        fill-opacity="0.7" />
+                    <defs>
+                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                            <stop stop-color="#7775D6" />
+                            <stop offset="1" stop-color="#E935C1" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+                <div class="mx-auto max-w-md lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Boost your productivity. Start using our app today.
+                    </h2>
+                    <p class="mt-6 text-md lg:text-lg leading-8 text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                        vitae nisi ea unde blanditiis, quas tempora.
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-6 lg:justify-start">
+                        <a href="#"
+                            class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get
+                            started</a>
+                        <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+                <div class="relative mt-16 h-80 lg:mt-8">
+                    <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                        src="./src/assets/images/dark-project-app-screenshot.png" alt="App screenshot" width="1824"
+                        height="1080" />
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
