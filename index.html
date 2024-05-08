@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hero UI Template</title>
-    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./src/components/script.js"></script>
@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div class="flex lg:hidden">
-                <button type="button"
+                <button type="button" id="btn"
                     class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -43,7 +43,7 @@
                     <button type="button"
                         class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
                         aria-expanded="false">
-                        Product
+                        MetaZak Pro
                         <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
                             aria-hidden="true">
                             <path fill-rule="evenodd"
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="flex-auto">
                                     <a href="#" class="block font-semibold text-gray-900">
-                                        Analytics
+                                        
                                         <span class="absolute inset-0"></span>
                                     </a>
                                     <p class="mt-1 text-gray-600">
@@ -193,9 +193,9 @@
                     </div>
                 </div>
 
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Academy</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Developers</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">About</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
@@ -203,7 +203,7 @@
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden hidden" role="dialog" aria-modal="true">
+        <div class="lg:hidden menu_toggle_hidden" role="dialog" aria-modal="true">
             <!-- Background backdrop, show/hide based on slide-over state. -->
             <div class="fixed inset-0 z-10"></div>
             <div
@@ -354,7 +354,7 @@
         <div class="mx-auto lg:mx-5 px-6 lg:px-8">
             <div class="mx-auto mt-16 lg:mt-24">
                 <dl class="grid grid-cols-1 lg:grid-cols-3 lg:space-x-10">
-                    <div class="relative pl-16">
+                    <div class="relative pl-16 fade-in-top">
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-700">
@@ -374,7 +374,7 @@
                             tokens that exist.
                         </dd>
                     </div>
-                    <div class="relative pl-16">
+                    <div class="relative pl-16 fade-in-top">
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-700">
@@ -392,7 +392,7 @@
                         </dd>
                     </div>
 
-                    <div class="relative pl-16">
+                    <div class="relative pl-16 fade-in-top">
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div
                                 class="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-700">
@@ -432,14 +432,14 @@
                 </p>
             </div>
 
-            <div class="mt-10">
+            <div class="mt-10 fade-in-top">
                 <img src="./src/assets/images/Dashboard assets.png" alt="..." class="rounded-xl" />
             </div>
 
             <!-- ========== Frame 4 ========== -->
             <div class="mt-20">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    <div>
+                    <div class="fade-in-left">
                         <dt class="text-base text-white flex">
                             <div class="mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -465,7 +465,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="fade-in-left">
                         <dt class="text-base text-white flex">
                             <div class="mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -496,7 +496,7 @@
 
 
 
-                    <div>
+                    <div class="fade-in-left">
                         <dt class="text-base text-white flex">
                             <div class="mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -527,7 +527,7 @@
 
 
 
-                    <div class="lg:mt-5">
+                    <div class="lg:mt-5 fade-in-left">
                         <dt class="text-base text-white flex">
                             <div class="mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -543,7 +543,7 @@
                             MetaZak Pro offers users the valuable capability to backtest any token of thier choice using
                             real-time data. You can gain valuable insights into the market tends.
                         </dl>
-                        <div class="flex items-center">
+                        <div class="flex items-center lg:mb-0 mb-8">
                             <a href="#" class="text-base text-indigo-700">Learn more </a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6 ml-1 text-indigo-700">
@@ -553,7 +553,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-5">
+                    <div class="mt-5 fade-in-left">
                         <dt class="text-base text-white flex">
                             <div class="mr-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -569,7 +569,7 @@
                             Our innovative Copy Trading model empowers investors to seamlessly replicate the trading
                             activities of their preferred wallets.
                         </dl>
-                        <div class="flex items-center">
+                        <div class="flex items-center lg:mb-0 mb-14">
                             <a href="#" class="text-base text-indigo-700">Learn more </a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6 ml-1 text-indigo-700">
@@ -580,7 +580,7 @@
                     </div>
 
 
-                    <div class="mt-5">
+                    <div class="mt-5 fade-in-left">
                         <dt class="text-base text-white flex ">
                             <div class="mr-2 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -596,7 +596,7 @@
                             MetaZak isn’t just a took ; it’s your indispensable crypto companion. Our platform
                             streamlines your investment journey.
                         </dl>
-                        <div class="flex items-center">
+                        <div class="flex items-center lg:mb-0 mb-8">
                             <a href="#" class="text-base text-indigo-700">Learn more </a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6 ml-1 text-indigo-700">
